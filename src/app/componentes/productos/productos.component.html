@@ -1,0 +1,7 @@
+
+<div class="productos">
+  <h2>Almacén</h2>
+  <div class="producto" *ngFor="let producto of productos">
+    <a class="info-basica" routerLink="/detalle/{{producto.id}}"><span>{{producto.id}}</span> {{producto.nombre}} </a>
+  </div>
+</div>

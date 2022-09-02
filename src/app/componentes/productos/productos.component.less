@@ -1,0 +1,44 @@
+@import "../../../assets/less/variables.less";
+
+.productos {
+  display: flex;
+  flex-direction: column;
+  animation: 2s fade-in;
+
+  .producto {
+    height: 40px;
+    margin-bottom: 16px;
+
+    .info-basica {
+      height: 40px;
+      background-color: @yellow;
+      color: #000;
+      font-size: 18px;
+      font-weight: 400;
+      padding: 8px 16px;
+      border: none;
+      margin-bottom: 16px;
+      border-radius: 8px;
+      font-family: Arial, Helvetica, sans-serif;
+      transition: 0.2s left linear;
+      position: relative;
+      left: 0;
+      text-decoration: none;
+
+      span {
+        color: red;
+        font-weight: 600;
+      }
+    }
+
+    .info-basica:hover {
+      border: 1px solid red;
+      left: 20px;
+    }
+  }
+}
+
+@keyframes fade-in {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}

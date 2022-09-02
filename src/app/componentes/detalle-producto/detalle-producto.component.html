@@ -1,0 +1,24 @@
+<div *ngIf="producto" class="detalle-producto">
+    <div class="main-c">
+        <div class="img-c">
+            <img [src]="producto.img" alt="Img">
+        </div>
+        <div class="info-c">
+            <h3><span>Detalles:</span> {{producto.nombre | uppercase}}</h3>
+            <div class="id-producto"><span>ID: </span>{{producto.id}}</div>
+            <div class="nombre-producto">
+                <label>Nombre:</label>
+                <input [(ngModel)]="producto.nombre" placeholder="Nombre"/>
+            </div>
+            <div class="precio-producto">
+                <label>Precio: <span>$</span> </label>
+                <input [(ngModel)]="producto.precio" placeholder="Precio"/>
+            </div>
+        </div>
+    </div>
+</div>
+
+<button class="button" (click)="volver()">
+    <img [src]="returnIcon" alt="<-">
+    <p>Volver</p>
+</button>

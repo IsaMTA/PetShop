@@ -25,5 +25,21 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
 # PetShop
+
 Sistema de ventas / administración de tienda de mascotas.
+
+## Consultas de configuraciones
+
+# BASE ANGULAR
+[Creación de proyecto](https://docs.angular.lat/tutorial/toh-pt0)
+
+# ESLINT
+Esta configuración sirve para mantener orden en el código [ESLint](https://dev.to/alexcamachogz/haz-tu-codigo-de-angular-elegante-con-eslint-y-prettier-1p7h)
+
+# STYLELINT
+Esta configuración es para darle formato a los archivos de estilos [StyleLint](https://stylelint.io/user-guide/get-started/)
+
+# TUTORIAL 
+[Angular Tutorial](https://docs.angular.lat/tutorial/toh-pt4)
