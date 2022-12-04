@@ -1,0 +1,52 @@
+<div class="container">
+    <form action="/action_page.php">
+        <div class="row">
+            <h2 style="text-align:center">Iniciar Sesión</h2>
+
+            <div class="col">
+                <a href="#" class="fb btn">
+                    <i class="fa fa-facebook fa-fw" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"></i> Iniciar Sesión con Facebook
+                </a>
+                <a href="#" class="google btn"><i class="fa fa-google fa-fw" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+            </i> Iniciar Sesión con Google</a>
+            </div>
+
+            <div class="col">
+                <input type="text" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;" name="username" placeholder="Usuario" required>
+                <input type="password" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;" name="password" placeholder="Contraseña" required>
+                <input type="submit" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;" value="LOGIN">
+            </div>
+
+            <div class="col">
+                <button onclick="document.getElementById('id01').style.display='block'" style="width: 100%; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #FDAB31;">REGISTRAR NUEVO USUARIO</button>
+                <a routerLink="/index-empleado"><input type="submit" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #31BDFD;" value="INICIO EMPLEADO"></a>
+            </div>
+        </div>
+    </form>
+</div>
+
+<!-- APARTADO DE VENTA PARA REGISTRAR NUEVO USUARIO -->
+<div id="id01" class="modal">
+    <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+
+    <form class="modal-content" action="/action_page.php">
+        <div class="container">
+            <h1>Registrar Nuevo Usuario</h1>
+            <p>Por favor llena todo el formato para crear una nueva cuenta.</p>
+            <hr>
+            <label for="email" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"><b>Email:</b></label>
+            <input type="text" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; width: 97%;" placeholder="Introduce tu correo eléctronico" name="email" required>
+
+            <label for="psw" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"><b>Contraseña:</b></label>
+            <input type="password" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; width: 97%;" placeholder="Contraseña" name="psw" required>
+
+            <label for="psw-repeat" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"><b>Repetir Contraseña:</b></label>
+            <input type="password" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; width: 97%;" placeholder="Repetir la contraseña" name="psw-repeat" required>
+
+            <div class="clearfix">
+                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Cancelar</button>
+                <button type="submit" class="signupbtn" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Registrar</button>
+            </div>
+        </div>
+    </form>
+</div>
