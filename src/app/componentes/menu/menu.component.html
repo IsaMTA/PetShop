@@ -1,29 +1,85 @@
 <!-- MENU  -->
 
-<div class="menu">
-    <div class="dropdown">
-        <button class="dropbtn">ACCESORIOS
-                <i class="fa fa-caret-down"></i>
-              </button>
-        <div class="dropdown-content">
-            <a routerLink="/accesorios-perro">Perro</a>
-            <a routerLink="/accesorios-gato">Gato</a>
+<section>
+    <div class="container">
+        <div class="menu is-hidden-mobile">
+            <div class="home is-clickable">
+                <a routerLink="/">
+                    <img [src]="iconoPetshop" alt="">
+                </a>
+            </div>
+
+            <div class="dropdown">
+                <button class="dropbtn">ACCESORIOS
+                        <i class="fa fa-caret-down"></i>
+                      </button>
+                <div class="dropdown-content d1">
+                    <a routerLink="/accesorios-perro">Perro</a>
+                    <a routerLink="/accesorios-gato">Gato</a>
+                </div>
+            </div>
+        
+        
+            <div class="dropdown">
+                <button class=" dropbtn ">NUTRICIÓN
+                        <i class="fa fa-caret-down "></i>
+                      </button>
+                <div class="dropdown-content ">
+                    <a routerLink="/fulltrust">Fulltrust</a>
+                    <a routerLink="/nupec">Nupec</a>
+                </div>
+            </div>
+        
+            <div class="menu2">
+                <a class="carrito is-clickable" routerLink="/carrito-compra">
+                    <p>({{totalProductos}})</p>
+                    <img [src]="iconoCarrito" alt=" ">
+                </a>
+                <a class="login is-clickable" routerLink="/iniciar-sesion">INICIAR SESIÓN</a>
+            </div>
+        </div>
+
+        <div class="menu-movil is-hidden-tablet">
+            <div class="encabezado">
+                <div class="home is-clickable">
+                    <a routerLink="/">
+                        <img [src]="iconoPetshop" alt="">
+                    </a>
+                </div>
+                <div class="btn-menu">
+                    <button (click)="abrirMenu()">
+                        <img [src]="iconoMenu" alt="">
+                    </button>
+                </div>
+            </div>
         </div>
     </div>
+</section>
 
+<div *ngIf="menuActivo" class="menu-colapsable">
+    <button class="cerrar">X</button>
 
-    <div class="dropdown">
-        <button class=" dropbtn ">NUTRICIÓN
-                <i class="fa fa-caret-down "></i>
-              </button>
-        <div class="dropdown-content ">
-            <a routerLink="/fulltrust">Fulltrust</a>
-            <a routerLink="/nupec">Nupec</a>
+    <div class="menu">
+        <button class="opcion" (click)="abrirAccesorios()">ACCESORIOS
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="opciones" *ngIf="accesoriosActivo">
+            <a (click)="abrirMenu()" class="opcion" routerLink="/accesorios-perro">Perro</a>
+            <a (click)="abrirMenu()" class="opcion" routerLink="/accesorios-gato">Gato</a>
         </div>
-    </div>
-
-    <div class="menu2 ">
-        <a routerLink="/iniciar-sesion">INICIAR SESIÓN</a>
-        <a routerLink="/carrito-compra"><img src="../../../assets/img/icono/carrito-de-compras.png " alt=" "></a>
+    
+        <button class=" opcion " (click)="abrirAlimentos()">NUTRICIÓN
+            <i class="fa fa-caret-down "></i>
+        </button>
+        <div class="opciones" *ngIf="alimentosActivo">
+            <a (click)="abrirMenu()" class="opcion" routerLink="/fulltrust">Fulltrust</a>
+            <a (click)="abrirMenu()" class="opcion" routerLink="/nupec">Nupec</a>
+        </div>
+    
+        <a class="opcion carrito is-clickable" (click)="abrirMenu()" routerLink="/carrito-compra">
+            <p>({{totalProductos}})</p>
+            <img [src]="iconoCarrito" alt=" ">
+        </a>
+        <a (click)="abrirMenu()" class="opcion is-clickable" routerLink="/iniciar-sesion">INICIAR SESIÓN</a>
     </div>
 </div>

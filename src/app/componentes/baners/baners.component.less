@@ -1,11 +1,18 @@
-.banners{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    margin-top: 25px;
-    margin-left: 150px;
-    margin-right: 150px;
+.banners {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 25px;
+  margin-left: 150px;
+  margin-right: 150px;
+
+  @media (max-width: 768px) {
+    margin-top: 0;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
 }
-.banners img{
-margin-top: 35px;
+
+.banners img {
+  margin-top: 35px;
 }

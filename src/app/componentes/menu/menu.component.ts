@@ -1,6 +1,10 @@
-import { Component, OnInit } from '@angular/core';
-import { NavigationStart, Router } from '@angular/router';
-
+import { Component, OnInit } from '@angular/core'
+import { NavigationStart, Router } from '@angular/router'
+import {
+  IconoCarrito,
+  IconoMenu,
+  IconoPetshop
+} from 'src/app/helpers/assets.helper'
 
 @Component({
   selector: 'app-menu',
@@ -8,12 +12,29 @@ import { NavigationStart, Router } from '@angular/router';
   styleUrls: ['./menu.component.less']
 })
 export class MenuComponent implements OnInit {
-  
-  constructor(private router:Router) { }
-  bandera=false;
+  iconoPetshop = IconoPetshop
+  iconoCarrito = IconoCarrito
+  iconoMenu = IconoMenu
 
-  ngOnInit(): void {
-    
+  constructor(private router: Router) {}
+
+  bandera = false
+  totalProductos = 0
+  menuActivo = false
+  accesoriosActivo = false
+  alimentosActivo = false
+
+  ngOnInit(): void {}
+
+  abrirMenu() {
+    this.menuActivo = !this.menuActivo
   }
 
+  abrirAlimentos() {
+    this.alimentosActivo = !this.alimentosActivo
+  }
+
+  abrirAccesorios() {
+    this.accesoriosActivo = !this.accesoriosActivo
+  }
 }

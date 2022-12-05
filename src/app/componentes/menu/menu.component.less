@@ -1,88 +1,247 @@
+/* stylelint-disable font-family-no-missing-generic-family-keyword */
+/* stylelint-disable color-function-notation */
+
 /************************************* barra del MENU *********************************/
 
+section {
+  @media (min-width: 1023px) {
+    padding: 35px 100px;
+  }
+
+  @media (min-width: 768.1px) and (max-width: 1022.9px) {
+    padding: 35px 50px;
+  }
+
+  @media (max-width: 768px) {
+    padding: 15px 20px;
+  }
+}
+
 .menu {
-    overflow: hidden;
-    background-color: #F0F0F0;
-    padding-left: 150px;
-    margin-top: 35px;
-    display: flex;
-    margin-bottom: 30px;
+  overflow: visible;
+  background-color: #f0f0f0;
+  display: flex;
+
+  @media (max-width: 910px) {
+    .home {
+      a {
+        padding-right: 0;
+      }
+    }
+
+    .dropdown {
+      .dropbtn {
+        font-size: 18px;
+      }
+    }
+
+    .menu2 {
+      a {
+        font-size: 18px;
+
+        p {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+
+  .home {
+    a {
+      display: flex;
+      align-items: center;
+      padding-top: 4px;
+
+      img {
+        width: 50px;
+        margin-right: 8px;
+      }
+    }
+  }
 }
 
 .menu a {
-    float: left;
-    font-size: 24px;
-    color: #0A6890;
-    text-align: center;
-    padding: 30px 24px;
-    text-decoration: none;
-    font-family: fredoka;
+  float: left;
+  font-size: 24px;
+  color: #0a6890;
+  text-align: center;
+  padding: 30px 24px;
+  text-decoration: none;
+  font-family: fredoka;
 }
 
 .menu2 {
-    margin-left: auto;
-   margin-right: 150px;
-    float: right;
+  margin-left: auto;
+  float: right;
 }
 
-.menu2 a {
+.menu2 {
+  a {
     float: right;
     font-size: 24px;
-    color: #0A6890;
+    color: #0a6890;
     text-align: center;
     padding: 16px 24px;
     text-decoration: none;
     font-family: fredoka;
+  }
 
+  a:hover {
+    color: #4aa7cf;
+  }
+}
+
+.carrito {
+  display: flex;
+  align-items: center;
+  height: 100%;
+
+  p {
+    display: flex;
+    margin-right: 8px;
+  }
+
+  img {
+    height: 24px;
+  }
+}
+
+.login {
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 
 .dropdown {
-    float: left;
-    overflow: hidden;
+  float: left;
+  overflow: visible;
+}
+
+.d1 {
+  margin-left: 16px;
 }
 
 .dropdown .dropbtn {
-    font-size: 24px;
-    border: none;
-    outline: none;
-    color: #0A6890;
-    padding: 16px 20px;
-    background-color: inherit;
-    font-family: fredoka;
-    margin: 0;
+  font-size: 24px;
+  border: none;
+  outline: none;
+  color: #0a6890;
+  padding: 16px 20px;
+  background-color: inherit;
+  font-family: fredoka;
+  margin: 0;
 }
 
 .menu a:hover,
 .dropdown:hover .dropbtn {
-    background-color: none;
+  background-color: none;
 }
 
 .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-    border-radius: 14px;
-    font-family: fredoka;
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 20%);
+  z-index: 1;
+  border-radius: 14px;
+  font-family: fredoka;
+  margin-top: 60px;
 }
 
 .dropdown-content a {
-    float: none;
-    color: black;
-    padding: 10px 14px;
-    text-decoration: none;
-    display: block;
-    text-align: center;
-    border-radius: 14px;
-    font-family: fredoka;
+  float: none;
+  color: black;
+  padding: 10px 14px;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  border-radius: 14px;
+  font-family: fredoka;
 }
 
 .dropdown-content a:hover {
-    background-color: #A1DBE8;
+  background-color: #a1dbe8;
 }
 
 .dropdown:hover .dropdown-content {
-    display: block;
+  display: block;
+}
+
+.menu-movil {
+  .encabezado {
+    display: flex;
+    justify-content: space-between;
+
+    .home {
+      width: 40px;
+      height: 40px;
+    }
+
+    .btn-menu {
+      button {
+        background-color: #0a6890;
+        border-radius: 8px;
+        border: none;
+        padding: 8px;
+
+        img {
+          width: 24px;
+          height: 24px;
+        }
+      }
+    }
+  }
+}
+
+.menu-colapsable {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  background-color: #fff;
+  top: 0;
+  z-index: 1;
+
+  .cerrar {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    color: #fff;
+    border: none;
+    background-color: red;
+    border-radius: 8px;
+  }
+
+  .menu {
+    margin-top: 40px;
+    display: flex;
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+
+    .opcion {
+      margin-bottom: 16px;
+      background-color: transparent;
+      border: none;
+      color: #0a6890;
+      font-size: 20px;
+      width: 100%;
+      font-family: fredoka;
+      text-align: left;
+      padding: 0;
+      height: auto;
+    }
+
+    .opciones {
+      width: 100%;
+      margin-left: 16px;
+      margin-bottom: 16px;
+      display: flex;
+      flex-direction: column;
+    }
+  }
 }
