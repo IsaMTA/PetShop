@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core'
+import { IconoBotonAgregar } from 'src/app/helpers/assets.helper'
 
 @Component({
   selector: 'app-accesorios-perro',
@@ -6,10 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./accesorios-perro.component.less']
 })
 export class AccesoriosPerroComponent implements OnInit {
+  btnAgregar = IconoBotonAgregar
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

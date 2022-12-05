@@ -1,4 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core'
+import {
+  IconoEliminar,
+  IconoMas,
+  IconoNuevoUsario,
+  IconoVista
+} from 'src/app/helpers/assets.helper'
 
 @Component({
   selector: 'app-index-empleado',
@@ -6,10 +12,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./index-empleado.component.less']
 })
 export class IndexEmpleadoComponent implements OnInit {
+  btnEliminar = IconoEliminar
+  btnMas = IconoMas
+  btnNuevoUsuario = IconoNuevoUsario
+  btnVista = IconoVista
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }
