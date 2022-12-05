@@ -37,12 +37,12 @@
   font-family: fredoka;
 }
 
-.dropdown {
+.my-dropdown {
   float: left;
   overflow: hidden;
 }
 
-.dropdown .dropbtn {
+.my-dropdown .my-dropbtn {
   font-size: 24px;
   border: none;
   outline: none;
@@ -54,11 +54,11 @@
 }
 
 .menu a:hover,
-.dropdown:hover .dropbtn {
+.my-dropdown:hover .my-dropbtn {
   background-color: none;
 }
 
-.dropdown-content {
+.my-dropdown-content {
   display: none;
   position: absolute;
   background-color: #f9f9f9;
@@ -69,7 +69,7 @@
   font-family: fredoka;
 }
 
-.dropdown-content a {
+.my-ropdown-content a {
   float: none;
   color: black;
   padding: 10px 14px;
@@ -80,10 +80,11 @@
   font-family: fredoka;
 }
 
-.dropdown-content a:hover {
+.my-dropdown-content a:hover {
   background-color: #a1dbe8;
 }
 
-.dropdown:hover .dropdown-content {
-  display: block;
+.my-dropdown:hover .my-dropdown-content {
+  display: flex;
+  flex-direction: column;
 }

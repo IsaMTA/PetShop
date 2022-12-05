@@ -1,0 +1,31 @@
+@import "../../../../../assets/less/admin.less";
+
+.navbar {
+  background-color: #4a2fa3 !important;
+}
+
+.container-fluid {
+  .btn-warning {
+    border-color: #a1dbe8;
+    background-color: #a1dbe8;
+
+    img {
+      width: 15px;
+      height: 15px;
+    }
+  }
+
+  ::ng-deep .collapse {
+    .nav-item a {
+      color: #fff !important;
+    }
+
+    .dropdown-menu {
+      background-color: red;
+
+      .dropdown-item:hover {
+        background-color: coral;
+      }
+    }
+  }
+}
