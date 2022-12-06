@@ -57,7 +57,7 @@
 </section>
 
 <div *ngIf="menuActivo" class="menu-colapsable">
-    <button class="cerrar">X</button>
+    <button class="cerrar" (click)="abrirMenu()">X</button>
 
     <div class="menu">
         <button class="opcion" (click)="abrirAccesorios()">ACCESORIOS

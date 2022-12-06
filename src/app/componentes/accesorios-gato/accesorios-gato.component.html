@@ -2,95 +2,20 @@
     <img src="../../../assets/img/banners/Gatos.jpg" alt="">
 </div>
 
-<div class="flex">
-    <div class="card">
-        <img src="../../../assets/img/HIGIENE GATO/arena para gato 3kg.png" style="width:100%" class="img">
-        <p class="price">$125.00</p>
-        <p class="text">Arena para gato 3kg.</p>
-        <p><button><img [src]="btnAgregar"   alt=""></button></p>
-    </div>
 
-    <div class="card">
-        <img src="../../../assets/img/HIGIENE GATO/arenero mediano.png" style="width:100%" class="img">
-        <p class="price">$120.00</p>
-        <p class="text">Arenero mediano.</p>
-        <p><button><img [src]="btnAgregar"   alt=""></button></p>
+<ng-container *ngFor="let renglon of listaRenglones">
+    <div class="flex">
+        <ng-container *ngFor="let producto of renglon">
+            <div class="card">
+                <img [src]="getImagenProducto(producto)" style="width:100%" class="img">
+                <p class="price">$ {{getPrecio(producto)}}</p>
+                <p class="text"> {{producto.nombre}} </p>
+                <p><button><img [src]="btnAgregar"   alt=""></button></p>
+            </div>
+        </ng-container>
     </div>
+</ng-container>
 
-    <div class="card">
-        <img src="../../../assets/img/HIGIENE GATO/neutralizador de olores para arenero 250 ml.png" style="width:100%" class="img">
-        <p class="price">$175.00</p>
-        <p class="text">Neutralizador de olores 250ml.</p>
-        <p><button><img [src]="btnAgregar"   alt=""></button></p>
-    </div>
-
-    <div class="card">
-        <img src="../../../assets/img/HIGIENE GATO/pala para arenero.png" style="width:100%" class="img">
-        <p class="price">$80.00</p>
-        <p class="text">Pala para arenero.</p>
-        <p><button><img [src]="btnAgregar"   alt=""></button></p>
-    </div>
-</div>
-
-<div class="flex">
-    <div class="card">
-        <img src="../../../assets/img/HIGIENE GATO/pasto para gatos.png" style="width:100%" class="img">
-        <p class="price">$333.00</p>
-        <p class="text">Pasto para gatos.</p>
-        <p><button><img [src]="btnAgregar"   alt=""></button></p>
-    </div>
-
-    <div class="card">
-        <img src="../../../assets/img/JUGUETES GATO/JUGETE CILINDRO CON LIENZOS.png" style="width:100%" class="img">
-        <p class="price">$50.00</p>
-        <p class="text">Cilindro con lienzos.</p>
-        <p><button><img [src]="btnAgregar"   alt=""></button></p>
-    </div>
-
-    <div class="card">
-        <img src="../../../assets/img/JUGUETES GATO/JUGUETE BOLA CON PLUMAS ECOPLAY.png" style="width:100%" class="img">
-        <p class="price">$70.00</p>
-        <p class="text">Juguete bola con plumas ecoplay</p>
-        <p><button><img [src]="btnAgregar"   alt=""></button></p>
-    </div>
-
-    <div class="card">
-        <img src="../../../assets/img/JUGUETES GATO/JUGUETE BOLA SOUND.png" style="width:100%" class="img">
-        <p class="price">$130.00</p>
-        <p class="text">Juguete bola sound.</p>
-        <p><button><img [src]="btnAgregar"   alt=""></button></p>
-    </div>
-</div>
-
-<div class="flex">
-    <div class="card">
-        <img src="../../../assets/img/JUGUETES GATO/JUGUETE ERIZO TERRESTRE VIBRO CATCH.png" style="width:100%" class="img">
-        <p class="price">$210.00</p>
-        <p class="text">Juguete erizo terrestre vibro catch.</p>
-        <p><button><img [src]="btnAgregar"   alt=""></button></p>
-    </div>
-
-    <div class="card">
-        <img src="../../../assets/img/JUGUETES GATO/JUGUETE PESCADO PARA GATO ECOPLAY.png" style="width:100%" class="img">
-        <p class="price">$124.00</p>
-        <p class="text">Juguete pescado para gato ecoplay.</p>
-        <p><button><img [src]="btnAgregar"   alt=""></button></p>
-    </div>
-
-    <div class="card">
-        <img src="../../../assets/img/JUGUETES GATO/JUGUETE SALAMANDRA SOUND.png" style="width:100%" class="img">
-        <p class="price">$195.00</p>
-        <p class="text">Juguete salamandra sound</p>
-        <p><button><img [src]="btnAgregar"   alt=""></button></p>
-    </div>
-
-    <div class="card">
-        <img src="../../../assets/img/JUGUETES GATO/JUGUETE TORRE PLAY.png" style="width:100%" class="img">
-        <p class="price">$318.00</p>
-        <p class="text">Juguete torre play.</p>
-        <p><button><img [src]="btnAgregar"   alt=""></button></p>
-    </div>
-</div>
 
 <div class="banner1">
     <img src="../../../assets/img/banners/Juguetes.jpg" alt="">
