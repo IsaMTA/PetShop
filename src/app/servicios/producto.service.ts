@@ -26,7 +26,7 @@ export class ProductService {
     return PRODUCTOS[0]
   }
 
-  getAllProductos() {
+  getListaProductos() {
     return this.db
       .list('productos')
       .snapshotChanges()

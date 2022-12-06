@@ -16,7 +16,7 @@ export class AccesoriosPerroComponent implements OnInit {
 
   ngOnInit(): void {
     this.productoService
-      .getAllProductos()
+      .getListaProductos()
       .subscribe((productos) => (this.productos = productos))
   }
 
