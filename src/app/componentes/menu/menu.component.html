@@ -10,23 +10,23 @@
             </div>
 
             <div class="dropdown">
-                <button class="dropbtn">ACCESORIOS
+                <button class="dropbtn"> {{accesorios.key}}
                         <i class="fa fa-caret-down"></i>
                       </button>
                 <div class="dropdown-content d1">
-                    <a routerLink="/accesorios-perro">Perro</a>
-                    <a routerLink="/accesorios-gato">Gato</a>
+                    <a routerLink="/accesorios-perro">{{accesorios.tipo1}}</a>
+                    <a routerLink="/accesorios-gato">{{accesorios.tipo2}}</a>
                 </div>
             </div>
         
         
             <div class="dropdown">
-                <button class=" dropbtn ">NUTRICIÓN
+                <button class=" dropbtn ">{{alimentos.key}}
                         <i class="fa fa-caret-down "></i>
                       </button>
                 <div class="dropdown-content ">
-                    <a routerLink="/fulltrust">Fulltrust</a>
-                    <a routerLink="/nupec">Nupec</a>
+                    <a routerLink="/fulltrust">{{alimentos.marca1}}</a>
+                    <a routerLink="/nupec">{{alimentos.marca2}}</a>
                 </div>
             </div>
         
