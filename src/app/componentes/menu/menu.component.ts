@@ -1,3 +1,4 @@
+import { CategoriasService } from './../../servicios/categorias.service'
 import { Component, OnInit } from '@angular/core'
 import { NavigationStart, Router } from '@angular/router'
 import {
@@ -16,7 +17,10 @@ export class MenuComponent implements OnInit {
   iconoCarrito = IconoCarrito
   iconoMenu = IconoMenu
 
-  constructor(private router: Router) {}
+  constructor(
+    private router: Router,
+    private categoriasService: CategoriasService
+  ) {}
 
   bandera = false
   totalProductos = 0
@@ -24,7 +28,13 @@ export class MenuComponent implements OnInit {
   accesoriosActivo = false
   alimentosActivo = false
 
-  ngOnInit(): void {}
+  categorias: any[]
+
+  ngOnInit(): void {
+    this.categoriasService
+      .getCategorias()
+      .subscribe((categorias) => (this.categorias = categorias))
+  }
 
   abrirMenu() {
     this.menuActivo = !this.menuActivo
@@ -36,5 +46,27 @@ export class MenuComponent implements OnInit {
 
   abrirAccesorios() {
     this.accesoriosActivo = !this.accesoriosActivo
+  }
+
+  get accesorios() {
+    if (this.categorias) {
+      for (let i = 0; i < this.categorias.length; i++) {
+        if (this.categorias[i].key == 'accesorio') {
+          return this.categorias[i]
+        }
+      }
+    }
+    return []
+  }
+
+  get alimentos() {
+    if (this.categorias) {
+      for (let i = 0; i < this.categorias.length; i++) {
+        if (this.categorias[i].key == 'alimento') {
+          return this.categorias[i]
+        }
+      }
+    }
+    return []
   }
 }
