@@ -2,145 +2,15 @@
     <img src="../../../assets/img/banners/banner-fulltrust.jpg" alt="">
 </div>
 
-<div class="flex">
-    <div class="card">
-        <img src="../../../assets/img/FULLTRUST/cachorroFULLTRUST.png" style="width:100%" class="img">
-        <p class="price">$320.00</p>
-        <p class="text">Fulltrust - Perro Cachorro 2 kg.</p>
-        <p><button><img [src]="btnAgregar"   alt=""></button></p>
+<ng-container *ngFor="let renglon of listaRenglones">
+    <div class="flex">
+        <ng-container *ngFor="let producto of renglon">
+            <div class="card">
+                <img [src]="getImagenProducto(producto)" style="width:100%" class="img">
+                <p class="price">$ {{getPrecio(producto)}}</p>
+                <p class="text"> {{producto.nombre}} </p>
+                <p><button><img [src]="btnAgregar"   alt=""></button></p>
+            </div>
+        </ng-container>
     </div>
-
-    <div class="card">
-        <img src="../../../assets/img/FULLTRUST/cachorroFULLTRUST.png" style="width:100%" class="img">
-        <p class="price">$1065.00</p>
-        <p class="text">Fulltrust - Perro Cachorro 8 kg.</p>
-        <p><button><img [src]="btnAgregar"   alt=""></button></p>
-    </div>
-
-    <div class="card">
-        <img src="../../../assets/img/FULLTRUST/cachorroFULLTRUST.png" style="width:100%" class="img">
-        <p class="price">$1733.00</p>
-        <p class="text">Fulltrust - Perro Cachorro 15 kg.</p>
-        <p><button><img [src]="btnAgregar"   alt=""></button></p>
-    </div>
-
-    <div class="card">
-        <img src="../../../assets/img/FULLTRUST/cachorroFULLTRUST.png" style="width:100%" class="img">
-        <p class="price">$2500.00</p>
-        <p class="text">Fulltrust - Perro Cachorro 20 kg.</p>
-        <p><button><img [src]="btnAgregar"   alt=""></button></p>
-    </div>
-</div>
-
-<div class="flex">
-    <div class="card">
-        <img src="../../../assets/img/FULLTRUST/adultoFULLTRUST.png" style="width:100%" class="img">
-        <p class="price">$275.00</p>
-        <p class="text">Fulltrust - Perro Adulto 2 kg.</p>
-        <p><button><img [src]="btnAgregar"   alt=""></button></p>
-    </div>
-
-    <div class="card">
-        <img src="../../../assets/img/FULLTRUST/adultoFULLTRUST.png" style="width:100%" class="img">
-        <p class="price">$995.00</p>
-        <p class="text">Fulltrust - Perro Adulto 8 kg.</p>
-        <p><button><img [src]="btnAgregar"   alt=""></button></p>
-    </div>
-
-    <div class="card">
-        <img src="../../../assets/img/FULLTRUST/adultoFULLTRUST.png" style="width:100%" class="img">
-        <p class="price">$1675.00</p>
-        <p class="text">Fulltrust - Perro Adulto 15 kg.</p>
-        <p><button><img [src]="btnAgregar"   alt=""></button></p>
-    </div>
-
-    <div class="card">
-        <img src="../../../assets/img/FULLTRUST/adultoFULLTRUST.png" style="width:100%" class="img">
-        <p class="price">$2175.00</p>
-        <p class="text">Fulltrust - Perro Adulto 20 kg.</p>
-        <p><button><img [src]="btnAgregar"   alt=""></button></p>
-    </div>
-</div>
-
-<div class="flex">
-    <div class="card">
-        <img src="../../../assets/img/FULLTRUST/fulltrust.png" style="width:100%" class="img">
-        <p class="price">$310.00</p>
-        <p class="text">Fulltrust - Perro Adulto Cordero 2 kg.</p>
-        <p><button><img [src]="btnAgregar"   alt=""></button></p>
-    </div>
-
-    <div class="card">
-        <img src="../../../assets/img/FULLTRUST/fulltrust.png" style="width:100%" class="img">
-        <p class="price">$1042.00</p>
-        <p class="text">Fulltrust - Perro Adulto Cordero 8 kg.</p>
-        <p><button><img [src]="btnAgregar"   alt=""></button></p>
-    </div>
-
-    <div class="card">
-        <img src="../../../assets/img/FULLTRUST/paquete-gatitoFULLTRUST.png" style="width:100%" class="img">
-        <p class="price">$285.00</p>
-        <p class="text">Fulltrust - Gatito 1.5 kg.</p>
-        <p><button><img [src]="btnAgregar"   alt=""></button></p>
-    </div>
-
-    <div class="card">
-        <img src="../../../assets/img/FULLTRUST/paquete-gatoAdultoFULLTRUST.png" style="width:100%" class="img">
-        <p class="price">$260.00</p>
-        <p class="text">Fulltrust - Gato Adulto 1.5 kg.</p>
-        <p><button><img [src]="btnAgregar"   alt=""></button></p>
-    </div>
-</div>
-
-<div class="flex">
-    <div class="card">
-        <img src="../../../assets/img/FULLTRUST/paquete-gatoAdultoFULLTRUST.png" style="width:100%" class="img">
-        <p class="price">$485.00</p>
-        <p class="text">Fulltrust - Gato Adulto 3 kg.</p>
-        <p><button><img [src]="btnAgregar"   alt=""></button></p>
-    </div>
-
-    <div class="card">
-        <img src="../../../assets/img/FULLTRUST/cachorrorpFULLTRUST.png" style="width:100%" class="img">
-        <p class="price">$385.00</p>
-        <p class="text">Fulltrust - Perro Cachorro RP 2 kg.</p>
-        <p><button><img [src]="btnAgregar"   alt=""></button></p>
-    </div>
-
-    <div class="card">
-        <img src="../../../assets/img/FULLTRUST/cachorrorpFULLTRUST.png" style="width:100%" class="img">
-        <p class="price">$1305.00</p>
-        <p class="text">Fulltrust - Perro Cachorro RP 8 kg.</p>
-        <p><button><img [src]="btnAgregar"   alt=""></button></p>
-    </div>
-
-    <div class="card">
-        <img src="../../../assets/img/FULLTRUST/adultorpFULLTRUST.png" style="width:100%" class="img">
-        <p class="price">$335.00</p>
-        <p class="text">Fulltrust - Perro Adulto RP 2 kg.</p>
-        <p><button><img [src]="btnAgregar"   alt=""></button></p>
-    </div>
-</div>
-
-<div class="flex">
-    <div class="card">
-        <img src="../../../assets/img/FULLTRUST/adultorpFULLTRUST.png" style="width:100%" class="img">
-        <p class="price">$1135.00</p>
-        <p class="text">Fulltrust - Perro Adulto RP 8 kg.</p>
-        <p><button><img [src]="btnAgregar"   alt=""></button></p>
-    </div>
-
-    <div class="card">
-        <img src="../../../assets/img/FULLTRUST/seniorFULLTRUST.png" style="width:100%" class="img">
-        <p class="price">$435.00</p>
-        <p class="text">Fulltrust - Perro Senior 2 kg.</p>
-        <p><button><img [src]="btnAgregar"   alt=""></button></p>
-    </div>
-
-    <div class="card">
-        <img src="../../../assets/img/FULLTRUST/seniorFULLTRUST.png" style="width:100%" class="img">
-        <p class="price">$1405.00</p>
-        <p class="text">Fulltrust - Perro Senior 8 kg.</p>
-        <p><button><img [src]="btnAgregar"   alt=""></button></p>
-    </div>
-</div>
+</ng-container>
