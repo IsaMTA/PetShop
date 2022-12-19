@@ -8,7 +8,10 @@ import { map } from 'rxjs'
 export class CategoriasService {
   constructor(private db: AngularFireDatabase) {}
 
+  
+
   getCategorias() {
+    
     return this.db
       .list('categorias')
       .snapshotChanges()
