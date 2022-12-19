@@ -18,8 +18,8 @@
                     <a routerLink="/accesorios-gato">{{accesorios.tipo2}}</a>
                 </div>
             </div>
-        
-        
+
+
             <div class="dropdown">
                 <button class=" dropbtn ">{{alimentos.key}}
                         <i class="fa fa-caret-down "></i>
@@ -29,26 +29,34 @@
                     <a routerLink="/nupec">{{alimentos.marca2}}</a>
                 </div>
             </div>
-        
+
             <div class="menu2">
                 <a class="carrito is-clickable" routerLink="/carrito-compra">
                     <p>({{totalProductos}})</p>
                     <img [src]="iconoCarrito" alt=" ">
                 </a>
-                <a class="login is-clickable" routerLink="/iniciar-sesion">INICIAR SESIÓN</a>
+                <!-- si el usuario inicio sesion -->
+                <div *ngIf="(user | async); else sesionCerrada" class="usuario">
+                    <img [src]="(user | async)?.photoURL" referrerpolicy="no-referrer">
+                    <span>{{(user | async)?.displayName}}</span>
+                    <button (click)=" cerrarSesion() ">Cerrar sesión</button>
+                </div>
+                <ng-template #sesionCerrada>
+                    <a class="login is-clickable" routerLink="/iniciar-sesion">INICIAR SESIÓN</a>
+                </ng-template>
             </div>
         </div>
 
-        <div class="menu-movil is-hidden-tablet">
-            <div class="encabezado">
-                <div class="home is-clickable">
-                    <a routerLink="/">
-                        <img [src]="iconoPetshop" alt="">
+        <div class="menu-movil is-hidden-tablet ">
+            <div class="encabezado ">
+                <div class="home is-clickable ">
+                    <a routerLink="/ ">
+                        <img [src]="iconoPetshop " alt=" ">
                     </a>
                 </div>
-                <div class="btn-menu">
-                    <button (click)="abrirMenu()">
-                        <img [src]="iconoMenu" alt="">
+                <div class="btn-menu ">
+                    <button (click)="abrirMenu() ">
+                        <img [src]="iconoMenu " alt=" ">
                     </button>
                 </div>
             </div>
@@ -56,30 +64,30 @@
     </div>
 </section>
 
-<div *ngIf="menuActivo" class="menu-colapsable">
-    <button class="cerrar" (click)="abrirMenu()">X</button>
+<div *ngIf="menuActivo " class="menu-colapsable ">
+    <button class="cerrar " (click)="abrirMenu() ">X</button>
 
-    <div class="menu">
-        <button class="opcion" (click)="abrirAccesorios()">ACCESORIOS
-            <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="opciones" *ngIf="accesoriosActivo">
-            <a (click)="abrirMenu()" class="opcion" routerLink="/accesorios-perro">Perro</a>
-            <a (click)="abrirMenu()" class="opcion" routerLink="/accesorios-gato">Gato</a>
-        </div>
-    
-        <button class=" opcion " (click)="abrirAlimentos()">NUTRICIÓN
+    <div class="menu ">
+        <button class="opcion " (click)="abrirAccesorios() ">ACCESORIOS
             <i class="fa fa-caret-down "></i>
         </button>
-        <div class="opciones" *ngIf="alimentosActivo">
-            <a (click)="abrirMenu()" class="opcion" routerLink="/fulltrust">Fulltrust</a>
-            <a (click)="abrirMenu()" class="opcion" routerLink="/nupec">Nupec</a>
+        <div class="opciones " *ngIf="accesoriosActivo ">
+            <a (click)="abrirMenu() " class="opcion " routerLink="/accesorios-perro ">Perro</a>
+            <a (click)="abrirMenu() " class="opcion " routerLink="/accesorios-gato ">Gato</a>
         </div>
-    
-        <a class="opcion carrito is-clickable" (click)="abrirMenu()" routerLink="/carrito-compra">
+
+        <button class=" opcion " (click)="abrirAlimentos() ">NUTRICIÓN
+            <i class="fa fa-caret-down "></i>
+        </button>
+        <div class="opciones " *ngIf="alimentosActivo ">
+            <a (click)="abrirMenu() " class="opcion " routerLink="/fulltrust ">Fulltrust</a>
+            <a (click)="abrirMenu() " class="opcion " routerLink="/nupec ">Nupec</a>
+        </div>
+
+        <a class="opcion carrito is-clickable " (click)="abrirMenu() " routerLink="/carrito-compra ">
             <p>({{totalProductos}})</p>
-            <img [src]="iconoCarrito" alt=" ">
+            <img [src]="iconoCarrito " alt=" ">
         </a>
-        <a (click)="abrirMenu()" class="opcion is-clickable" routerLink="/iniciar-sesion">INICIAR SESIÓN</a>
+        <a (click)="abrirMenu() " class="opcion is-clickable " routerLink="/iniciar-sesion ">INICIAR SESIÓN</a>
     </div>
 </div>

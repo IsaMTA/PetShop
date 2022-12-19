@@ -1,14 +1,11 @@
 <div class="container">
-    <form action="/action_page.php">
+    <form>
         <div class="row">
             <h2 style="text-align:center">Iniciar Sesión</h2>
 
             <div class="col">
-                <a href="#" class="fb btn">
-                    <i class="fa fa-facebook fa-fw" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"></i> Iniciar Sesión con Facebook
-                </a>
-                <a href="#" class="google btn"><i class="fa fa-google fa-fw" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
-            </i> Iniciar Sesión con Google</a>
+                <!-- <button class="fb btn" (click)="signInWithFacebook()">Iniciar Sesión con Facebook</button> -->
+                <button class="google btn" (click)="signInWithGoogle()">Iniciar Sesión con Google</button>
             </div>
 
             <div class="col">
@@ -29,7 +26,7 @@
 <div id="id01" class="modal">
     <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
 
-    <form class="modal-content" action="/action_page.php">
+    <form class="modal-content">
         <div class="container">
             <h1>Registrar Nuevo Usuario</h1>
             <p>Por favor llena todo el formato para crear una nueva cuenta.</p>
