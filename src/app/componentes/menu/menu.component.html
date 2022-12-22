@@ -31,16 +31,20 @@
             </div>
 
             <div class="menu2">
+
                 <a class="carrito is-clickable" routerLink="/carrito-compra">
                     <p>({{totalProductos}})</p>
                     <img [src]="iconoCarrito" alt=" ">
                 </a>
+
                 <!-- si el usuario inicio sesion -->
                 <div *ngIf="(user | async); else sesionCerrada" class="usuario">
                     <img [src]="(user | async)?.photoURL" referrerpolicy="no-referrer">
+
                     <span>{{(user | async)?.displayName}}</span>
-                    <button (click)=" cerrarSesion() ">Cerrar sesión</button>
+                    <button (click)=" cerrarSesion() " class="cerrar-sesion">Cerrar sesión</button>
                 </div>
+
                 <ng-template #sesionCerrada>
                     <a class="login is-clickable" routerLink="/iniciar-sesion">INICIAR SESIÓN</a>
                 </ng-template>
