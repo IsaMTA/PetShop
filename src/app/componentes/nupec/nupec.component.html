@@ -6,7 +6,7 @@
     <div class="flex">
         <ng-container *ngFor="let producto of renglon">
             <div class="card">
-                <img [src]="getImagenProducto(producto)" style="width:90%" class="img">
+                <img [src]="getImagenProducto(producto)" style="width:100%" class="img">
                 <p class="price">$ {{getPrecio(producto)}}</p>
                 <p class="text"> {{producto.nombre}} </p>
                 <p><button><img [src]="btnAgregar"   alt=""></button></p>
